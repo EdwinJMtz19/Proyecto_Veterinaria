@@ -219,6 +219,39 @@ La base de datos se compone de 5 tablas:
 
   ```
 
+  En la tabla Empleado se almacenan los datos de los empleados que tienen acceso a nuestro sistema, esta tabla contiene los atributos de nombre, ID, nombre de usuario para ingresar al sistema y su contraseña
+  Dentro del sistema, el administrador podra agregar nuevos empleados y quitar empleados, este mismo le dara su nombre de usuario y contraseña para que el nuevo usuario pueda ingresar al sistema.
+  Si quiere ver los datos de los empleados mas a detalle, ejecute la siguiente consulta:
+
+  ```java
+  use veterinaria;  --Para usar el esquema de la veterinaria
+  select * from empleado;
+
+  ```
+
+
+  En la tabla Mascota se almacenan los datos de las mascotas que se han registrado de la veterinaria, esta tabla contiene los atributos de nombre, ID, rasgos y detalles, asi como el ID de su dueño asociado.
+  Mediante esto nosotros podemos obtener los datos del dueño consultando el id que se encuentra en los datos de la mascota.
+  Si quiere ver todos los datos de la tabla Cliente, ejecute la siguiente consulta:
+
+  ```java
+  use veterinaria;  --Para usar el esquema de la veterinaria
+  select * from mascota;
+
+  ```
+
+
+En la tabla Veterinario se almacenan los datos de los veterinarios que trabajan en la veterinaria, esta tabla contiene los atributos de nombre, nombre de usuario, correo electronico y contraseña
+  De igual forma que el empleado, podemos asignarle su rol con el rol de administrador en la ventana de empleados, asi como darle su nombre de usuario y contraseña dentro del sistema
+  Si quiere ver todos los datos de la tabla Cliente, ejecute la siguiente consulta:
+
+  ```java
+  use veterinaria;  --Para usar el esquema de la veterinaria
+  select * from veterinario;
+
+  ```
+
+## Video de explicacion del programa de veterinaria
 
 
 
