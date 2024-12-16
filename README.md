@@ -7,13 +7,24 @@ Este sistema fue desarrollado para facilitar el agendado de citas en una veterin
 
 ## Instalacion
 
-Para el proceso de Instalacion del sistema, debera tener instalado el programa MySQL para la base de datos que ocupara, la version recomendada es la mas reciente que este disponible
-Tambien 
+Para el proceso de Instalacion del sistema, debera tener instalado el programa MySQL para la base de datos que ocupara, la version recomendada es la version mas reciente de workbecnh, y la version 5.7.43 o 5.7.44 de Mysql Server
+
+### OJO, TENER UNA VERSION MAS RECIENTE DE MYSQL SERVER PUEDE GENERAR FALLOS O DIRECTAMENTE NO FUNCIONAR EL SISTEMA ###
 
 
+Tambien es necesario el ejecutable del programa.
+
+El desarrollador le proporcionara la base de datos y la cuenta de administrador
 
 
+EN CASO DE CONFIGURAR LA BASE DE DATOS USTED MISMO
 
+Descarga de la base de datos para el sistema de veterinaria: https://drive.google.com/file/d/1ofpJuTXFkbhhdVeVj2Rq2ePCAePLY6k-/view?usp=sharing
+
+Una vez instalado el MySQL, debera hacer una conexion, despues buscara la opcion, ejecutar script y ejecutar el script resectivamente.
+Automaticamente se creara la base de datos.
+
+Abrir en NetBeans el proyecto y buscar en la clase DataBase la linea de codigo de su contraseña de MySQL (Se explica mas abajo)
 
 
 
@@ -253,15 +264,23 @@ En la tabla Veterinario se almacenan los datos de los veterinarios que trabajan 
 
 ## Video de explicacion del programa de veterinaria
 
+### Uso del sistema con rol administrador
+
 [![Ver la demostración en YouTube](https://img.youtube.com/vi/PpCZeYmrJYM/maxresdefault.jpg)](https://www.youtube.com/watch?v=PpCZeYmrJYM)
 
 
 
+### Uso del sistema con rol empleado
+
+
+[![Ver la demostración en YouTube](https://img.youtube.com/vi/PSfTkFBTM978/maxresdefault.jpg)](https://www.youtube.com/watch?v=SfTkFBTM978)
 
 
 
 
+### Uso del sistema con rol veterinario
 
+[![Ver la demostración en YouTube](https://img.youtube.com/vi/4DHt_IDdu3o/maxresdefault.jpg)](https://www.youtube.com/watch?v=4DHt_IDdu3o)
 
 
 
