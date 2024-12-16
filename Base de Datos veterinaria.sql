@@ -37,7 +37,7 @@ CREATE TABLE `citas` (
   PRIMARY KEY (`id_cita`),
   KEY `nombre_usuario_vet` (`nombre_usuario_vet`),
   CONSTRAINT `citas_ibfk_1` FOREIGN KEY (`nombre_usuario_vet`) REFERENCES `veterinario` (`nombre_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -46,7 +46,7 @@ CREATE TABLE `citas` (
 
 LOCK TABLES `citas` WRITE;
 /*!40000 ALTER TABLE `citas` DISABLE KEYS */;
-INSERT INTO `citas` VALUES (3,4,1,'2024-01-01','08:00:00','juanfm_vet','pendiente'),(4,3,1,'2024-12-22','08:00:00','juanfm_vet','pendiente'),(5,2,1,'2024-01-01','08:00:00','juanfm_vet','Realizado');
+INSERT INTO `citas` VALUES (5,2,1,'2024-01-01','08:00:00','juanfm_vet','Realizado'),(6,2,1,'2024-12-28','08:00:00','juanfm_vet','pendiente');
 /*!40000 ALTER TABLE `citas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -103,7 +103,7 @@ CREATE TABLE `empleado` (
 
 LOCK TABLES `empleado` WRITE;
 /*!40000 ALTER TABLE `empleado` DISABLE KEYS */;
-INSERT INTO `empleado` VALUES ('eduardopm_adm','Eduardo Parra Miguelssss','dragonoso@gmail.com','admin','contraseña'),('juanpl_jua','Juan Perez Lopez','Juanperez89@gmsil.com','juan123','admin'),('lalogd_adm','Lalo Garza De La Rosa','lalitos@gmail.com','admin','password'),('uzielfm_emp','Uziel Franco Matiasos','cuentafranco214@gmail.com','empleado','contraseña');
+INSERT INTO `empleado` VALUES ('eduardopm_adm','Eduardo Parra Miguelssss','dragonoso@gmail.com','admin','contraseña'),('lalogd_adm','Lalo Garza De La Rosa','lalitos@gmail.com','admin','password'),('uzielfm_emp','Uziel Franco Matiasos','cuentafranco214@gmail.com','empleado','contraseña');
 /*!40000 ALTER TABLE `empleado` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -127,7 +127,7 @@ CREATE TABLE `mascota` (
   UNIQUE KEY `nombre_UNIQUE` (`nombre`),
   KEY `id_usuario` (`id_usuario`),
   CONSTRAINT `mascota_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `cliente` (`id_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -136,8 +136,33 @@ CREATE TABLE `mascota` (
 
 LOCK TABLES `mascota` WRITE;
 /*!40000 ALTER TABLE `mascota` DISABLE KEYS */;
-INSERT INTO `mascota` VALUES (2,'Pancraciosssitos',1,'Solos',7,'Macho','Rojo','PeliAzul'),(3,'pancho',1,'Sosis',4,'Macho','Rojo','Verde Amarela'),(4,'Griselda',1,'Perro',1,'Hembra','Gris','Ojos Verdes');
+INSERT INTO `mascota` VALUES (2,'Pancraciosssitos',1,'Solos',7,'Macho','Rojo','PeliAzul'),(5,'Griselda',4,'Perro Inutil',6,'Hembra','Inutil','Es inutil'),(6,'Grisidos',1,'Perrito',1,'Hembra','Gris','Ojos Verdes');
 /*!40000 ALTER TABLE `mascota` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `receta`
+--
+
+DROP TABLE IF EXISTS `receta`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `receta` (
+  `id_receta` int(11) NOT NULL AUTO_INCREMENT,
+  `detalles` varchar(1000) NOT NULL,
+  `id_mascota` varchar(45) NOT NULL,
+  PRIMARY KEY (`id_receta`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `receta`
+--
+
+LOCK TABLES `receta` WRITE;
+/*!40000 ALTER TABLE `receta` DISABLE KEYS */;
+INSERT INTO `receta` VALUES (1,'Necesita muchos mimos\nQue lo quieran\n2 gramos de cocaidrofizol\nmuchas ganas de vivir jijiji','2'),(2,'Necesidad de lentes\nNo ve bien\nProblemas para encontrar cosas','5');
+/*!40000 ALTER TABLE `receta` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -178,5 +203,5 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-12-12  9:25:43
+-- Dump completed on 2024-12-15 17:55:03
 
