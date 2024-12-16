@@ -273,7 +273,7 @@ En la tabla Veterinario se almacenan los datos de los veterinarios que trabajan 
 ### Uso del sistema con rol empleado
 
 
-[![Ver la demostración en YouTube](https://img.youtube.com/vi/PSfTkFBTM978/maxresdefault.jpg)](https://www.youtube.com/watch?v=SfTkFBTM978)
+[![Ver la demostración en YouTube](https://img.youtube.com/vi/SfTkFBTM978/maxresdefault.jpg)](https://www.youtube.com/watch?v=SfTkFBTM978)
 
 
 
